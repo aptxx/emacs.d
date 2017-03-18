@@ -25,10 +25,16 @@
 (when (< emacs-major-version 24)
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
+
+(defconst sanityinc/no-ssl (or (< emacs-major-version 24)
+                               (and (memq system-type '(windows-nt ms-dos))
+                                    (not (gnutls-available-p)))))
+
 ;;; Also use Melpa for most packages
-(add-to-list 'package-archives `("melpa" . ,(if (< emacs-major-version 24)
-                                                "http://melpa.org/packages/"
-                                              "https://melpa.org/packages/")))
+(add-to-list 'package-archives
+             `("melpa" . ,(if sanityinc/no-ssl
+                              "http://melpa.org/packages/"
+                            "https://melpa.org/packages/")))
 
 ;; NOTE: In case of MELPA problems, the official mirror URL is
 ;; https://www.mirrorservice.org/sites/stable.melpa.org/packages/
@@ -63,7 +69,7 @@ locate PACKAGE."
   (condition-case err
       (require-package package min-version no-refresh)
     (error
-     (message "Couldn't install package `%s': %S" package err)
+     (message "Couldn't install optional package `%s': %S" package err)
      nil)))
 
 
