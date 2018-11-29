@@ -80,6 +80,8 @@
 (require 'init-git)
 (require 'init-github)
 
+(require 'init-evil)
+
 (require 'init-projectile)
 
 (require 'init-compile)
@@ -95,15 +97,15 @@
 (require 'init-haml)
 (require 'init-http)
 (require 'init-python)
-(require 'init-haskell)
-(require 'init-elm)
-(require 'init-purescript)
+;;(require 'init-haskell)
+;;(require 'init-elm)
+;;(require 'init-purescript)
 (require 'init-ruby)
 (require 'init-sql)
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
-(require 'init-terraform)
+;;(require 'init-terraform)
 ;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
@@ -123,11 +125,8 @@
 (require 'init-dash)
 
 ;;(require 'init-twitter)
-;; (require 'init-mu)
+;;(require 'init-mu)
 (require 'init-ledger)
-
-;; Hank
-(require 'init-evil)
 
 ;; Extra packages which don't require any configuration
 
