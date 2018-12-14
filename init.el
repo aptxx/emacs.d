@@ -132,6 +132,7 @@
 
 (require-package 'gnuplot)
 (require-package 'lua-mode)
+(require-package 'go-mode)
 (require-package 'htmlize)
 (require-package 'dsvn)
 (when *is-a-mac*
