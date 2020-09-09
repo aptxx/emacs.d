@@ -82,7 +82,7 @@
 (require 'init-git)
 (require 'init-github)
 
-(require 'init-evil)
+;;(require 'init-evil)
 
 (require 'init-projectile)
 
@@ -97,15 +97,15 @@
 ;;(require 'init-nxml)
 (require 'init-html)
 (require 'init-css)
-(require 'init-haml)
+;;(require 'init-haml)
 (require 'init-http)
 (require 'init-python)
 ;;(require 'init-haskell)
 ;;(require 'init-elm)
 ;;(require 'init-purescript)
-(require 'init-ruby)
+;;(require 'init-ruby)
 (require 'init-sql)
-(require 'init-nim)
+;;(require 'init-nim)
 (require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
