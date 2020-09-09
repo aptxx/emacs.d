@@ -9,7 +9,7 @@
 ;; Produce backtraces when errors occur: can be helpful to diagnose startup issues
 ;;(setq debug-on-error t)
 
-(let ((minver "24.4"))
+(let ((minver "24.5"))
   (when (version< emacs-version minver)
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
 (when (version< emacs-version "25.1")
@@ -105,6 +105,8 @@
 ;;(require 'init-purescript)
 (require 'init-ruby)
 (require 'init-sql)
+(require 'init-nim)
+(require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
@@ -120,7 +122,7 @@
 (require 'init-common-lisp)
 
 (when *spell-check-support-enabled*
-  (require 'init-spelling))
+(require 'init-spelling))
 
 (require 'init-misc)
 
@@ -139,9 +141,9 @@
 (require-package 'go-mode)
 (require-package 'htmlize)
 (when *is-a-mac*
-  (require-package 'osx-location))
+(require-package 'osx-location))
 (unless (eq system-type 'windows-nt)
-  (maybe-require-package 'daemons))
+(maybe-require-package 'daemons))
 (maybe-require-package 'dotenv-mode)
 (maybe-require-package 'shfmt)
 
