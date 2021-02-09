@@ -106,8 +106,7 @@
 (require 'init-sql)
 (require 'init-ocaml)
 (require 'init-j)
-(require 'init-nim)
->>>>>>> upstream/master
+;;(require 'init-nim)
 (require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
