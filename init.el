@@ -172,6 +172,12 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+(setq-default auto-insert-directory (expand-file-name "auto-insert" user-emacs-directory))
+(setq auto-insert-query nil)
+(auto-insert-mode)
+(define-auto-insert "\\.go" "go-auto-insert")
+
+
 
 ;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
